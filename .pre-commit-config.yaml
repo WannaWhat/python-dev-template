@@ -4,13 +4,13 @@ repos:
       - id: isort
         name: isort
         entry: isort
-        language: system
+        language: python
         types: [ python ]
         args: [ . ]
 
-      - id: autoflake
-        name: autoflake
-        entry: autoflake
-        language: system
-        types: [ python ]
-        args: [ . ]
+#      - id: autoflake
+#        name: autoflake
+#        entry: autoflake
+#        language: system
+#        types: [ python ]
+#        args: [ . ]

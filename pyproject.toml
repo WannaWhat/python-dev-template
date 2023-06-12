@@ -19,6 +19,12 @@ autoflake = "^2.1.1"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+#
+#[tool.isort]
+#multi_line_output = 9
+#line_length = 88
+#group_by_package = true
+
 
 [tool.autoflake]
 in-place = true
