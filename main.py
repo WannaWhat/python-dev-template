@@ -1,3 +1,6 @@
+import logging
+
+logger = logging.getLogger()
 
 if __name__ == '__main__':
-    print('Hello')
+    logger.info('Hello World')
