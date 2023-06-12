@@ -11,16 +11,49 @@ python = "^3.11"
 
 
 [tool.poetry.group.dev.dependencies]
-rich = "^13.4.1"
 pre-commit = "^3.3.2"
 isort = "^5.12.0"
 autoflake = "^2.1.1"
+flake8 = "^6.0.0"
+flake8-blind-except = "^0.2.1"
+flake8-broken-line = "^1.0.0"
+flake8-variables-names = "^0.0.5"
+flake8-string-format = "^0.3.0"
+flake8-quotes = "^3.3.2"
+flake8-print = "^5.0.0"
+flake8-mutable = "^1.2.0"
+flake8-isort = "^6.0.0"
+flake8-pyproject = "^1.2.3"
+autopep8 = "^2.0.2"
+pycodestyle = "^2.10.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.isort]
+multi_line_output = 9
+line_length = 88
+group_by_package = true
+skip_gitignore = true
+
+
 [tool.autoflake]
 in-place = true
 remove-all-unused-imports = true
+remove-unused-variables = true
 recursive = true
+exclude = [ "venv", "locales"]
+
+
+[tool.autopep8]
+recursive = true
+in-place = true
+verbose = true
+max-line-length = 120
+exclude = "venv,locales,venv1"
+
+
+[tool.flake8]
+max-line-length = 120
+exclude = [ "venv", "locales"]

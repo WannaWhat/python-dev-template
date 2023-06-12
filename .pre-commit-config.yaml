@@ -1,16 +1,47 @@
 repos:
+  - repo: 'https://github.com/pre-commit/pre-commit-hooks'
+    rev: v2.4.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+      - id: check-byte-order-marker
+      - id: detect-private-key
+      - id: check-ast
+
   - repo: local
     hooks:
       - id: isort
         name: isort
         entry: isort
-        language: system
+        language: python
         types: [ python ]
         args: [ . ]
 
       - id: autoflake
         name: autoflake
         entry: autoflake
-        language: system
+        language: python
         types: [ python ]
         args: [ . ]
+
+      - id: autopep8
+        name: autopep8
+        entry: autopep8
+        language: python
+        types: [ python ]
+        args: [ . ]
+
+      - id: flake8
+        name: flake8
+        entry: flake8
+        language: python
+        types: [ python ]
+        args: [ . ]
+
+  - repo: https://github.com/python-poetry/poetry
+    rev: '1.5.1'
+    hooks:
+      - id: poetry-check
+      - id: poetry-lock
+      - id: poetry-export
+        args: ["-f", "requirements.txt", "-o", "requirements.txt"]
