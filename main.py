@@ -1,10 +1,6 @@
 import logging
-import os
 
-import rich
-
-from somefile import script
+logger = logging.getLogger()
 
 if __name__ == '__main__':
-    os.getenv('fd')
-    print('Hello1')
+    logger.info('Hello World')
