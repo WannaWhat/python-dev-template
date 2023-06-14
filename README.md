@@ -3,13 +3,14 @@
 ---
 
 ## Startup project
-
-1. Install all developers packages
+Эту команду необходимо ввести при инициализации проекта, она установит все зависимости для работы линтеров, автоформатеров и автосортировщиков импортов
+### 1. Install all packages
 ```shel
 poetry install --with dev
 ```
 
-2. Init pre-commit
+### 2. Init pre-commit
+Эта команда настраивает Git хуки, они будут срабатывать при каждом коммите
 ```shell
 poetry run pre-commit install
 ```
@@ -19,7 +20,7 @@ poetry run pre-commit install
 ## Pre-commit
 Хуки будут запускаться автоматически при каждом коммите
 
-### Запуск проверки без коммита
+### Запуск проверки / форматирования кода без коммита
 ```shell
 poetry run pre-commit run
 ```
