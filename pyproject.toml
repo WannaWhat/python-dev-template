@@ -9,7 +9,6 @@ packages = [{include = "4u_dev_template"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 requests = "^2.31.0"
-pre-commit = "^3.3.3"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -27,6 +26,7 @@ flake8-isort = "^6.0.0"
 flake8-pyproject = "^1.2.3"
 autopep8 = "^2.0.2"
 pycodestyle = "^2.10.0"
+pre-commit = "^3.3.3"
 
 [build-system]
 requires = ["poetry-core"]
