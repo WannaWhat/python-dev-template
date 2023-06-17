@@ -8,10 +8,10 @@ packages = [{include = "4u_dev_template"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+requests = "^2.31.0"
 
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.3.2"
 isort = "^5.12.0"
 autoflake = "^2.1.1"
 flake8 = "^6.0.0"
@@ -26,6 +26,7 @@ flake8-isort = "^6.0.0"
 flake8-pyproject = "^1.2.3"
 autopep8 = "^2.0.2"
 pycodestyle = "^2.10.0"
+pre-commit = "^3.3.3"
 
 [build-system]
 requires = ["poetry-core"]
@@ -51,7 +52,8 @@ recursive = true
 in-place = true
 verbose = true
 max-line-length = 120
-exclude = "venv,locales,venv1"
+exclude = "venv,locales"
+
 
 
 [tool.flake8]
